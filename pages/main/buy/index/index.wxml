@@ -1,0 +1,42 @@
+
+<view class='index'>
+<view class="index_head">
+  <text>今日求购55单</text>
+</view>
+<navigator class="index_head_href"
+    url="../../sell/index/index"
+    open-type="switchTab"
+    hover-class="navigator-hover" >
+    今日供应
+  </navigator>
+    <!-- 求购部分 -->
+  <view class="index_detail">
+      <view class="index_detail_item" wx:for="{{trees}}" wx:key="key">
+          <view class="item_header">
+            <text>求购：</text>
+            <text>{{item.treename}}</text>
+            <image src='../../../../images/main_buy_label.png'></image>
+          </view>
+          <!-- 求购详细信息 -->
+          <view class="item_content"> 
+              <view>求购数量：<text class='gray'>{{item.num}}立方米</text></view>
+              <view>发布时间：<text class='gray'>{{item.date}}</text></view>
+              <view>规格：<text class='gray'>{{item.size}}</text></view>
+              <view>交货地：<text class='gray'>{{item.address}}</text></view>
+          </view>
+          <!-- 状态+按钮 -->
+          <view class='item_footer flex-wrp' style="flex-direction:row;">
+              <view class='status'>状态：<text class='color_text'>买家求购中</text></view>
+              <view class='btn'>
+                <!-- 查看详情按钮 -->
+                <navigator class='footer_right' url=''>
+                    <image src='../../../../images/main_button_quote.png'></image>
+                </navigator>
+                <view>已有<text>3</text>家参入报价</view>
+              </view>
+          </view>
+      </view>
+  </view>
+  <!-- 加载完毕 -->
+  <view class='loadAll bg_gray'>已加载完全部</view>
+  </view>

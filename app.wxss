@@ -1,0 +1,15 @@
+.gray{
+  color: #999;
+}
+.flex-wrp {
+  display: flex;
+}
+.bg_gray{
+  background-color: #eee;
+}
+.bc_gray{
+  background-color: #efeff4;
+}
+.bc_green{
+  background-color: #50ab43;
+}

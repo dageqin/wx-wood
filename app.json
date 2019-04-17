@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/main/sell/index/index",
+    "pages/main/buy/index/index",
+    "pages/msg/index/index",
+    "pages/my/index/index"
+
+  ],
+  "tabBar": {
+    "color":"#",
+    "selectedColor":"#50ab43",
+    "backgroundColor": "#ededed",
+    "list": [
+      {
+        "pagePath": "pages/main/sell/index/index",
+        "text": "首页",
+        "iconPath":"./images/main_home_off.png",
+        "selectedIconPath":"./images/main_home_on.png"
+      },
+      {
+        "pagePath": "pages/msg/index/index",
+        "text": "消息",
+        "iconPath": "./images/main_message_off.png",
+        "selectedIconPath": "./images/main_message_on.png"
+      },
+      {
+        "pagePath": "pages/my/index/index",
+        "text": "我的",
+        "iconPath": "./images/main_mine_off.png",
+        "selectedIconPath": "./images/main_mine_on.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eee",
+    "navigationBarTitleText": "全木材",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}
