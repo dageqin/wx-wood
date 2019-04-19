@@ -16,7 +16,7 @@
   <!-- 基本信息 -->
   <view class='sell_basic content_pad bc_whrite'>
     <view class='box_bot'>基本信息(<text class='red'>必填</text>)</view>
-    <view class='gray' wx:if='{{notSelected}}'>请选择求购产品分类、品名</view>
+    <view class='gray' wx:if='{{notSelected}}'>请选择供应产品分类、品名</view>
     <view wx:if='{{!notSelected}}'>
       <view class='box_border box_bot'>
         <text>长度</text>

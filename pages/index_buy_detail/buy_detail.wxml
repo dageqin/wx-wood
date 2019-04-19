@@ -3,7 +3,7 @@
 <form bindsubmit="formSubmit">
   <!-- 选择供应类型 -->
   <view class='sell_type content_pad bc_whrite'>
-    <view class='box_bot'>选择供应类型(<text class='red'>必填</text>)</view>
+    <view class='box_bot'>选择求购类型(<text class='red'>必填</text>)</view>
     <view class='box_border box_bot'>选择分类
       <navigator class='nav_right' url='../index_sell_detail_category/category'>
         <image class='btn_right' src='../../images/btn_right.png'></image>
@@ -38,11 +38,11 @@
       <view class='box_border'>名称</view> -->
     </view>
   </view>
-  <!-- 供应信息 -->
+  <!-- 求购信息 -->
   <view class='sell_info content_pad bc_whrite'>
-    <view class='box_bot'>供应信息(<text class='red'>必填</text>)</view>
+    <view class='box_bot'>求购信息(<text class='red'>必填</text>)</view>
     <view class='box_border box_bot'>
-      <text>供应数量</text>
+      <text>求购数量</text>
       <text>立方</text>
       <image class='btn_right' src='../../images/btn_right.png'></image>
     </view>
@@ -57,27 +57,52 @@
       <label>联系人</label>
       <input class='row_input' name='Contact' />
     </view>
-    <view class='box_border' style="display:flex;">
+    <view class='box_border box_bot' style="display:flex;">
       <label>联系电话</label>
       <input class='row_input' name='phone' />
+    </view>
+    <view class='box_border box_bot' style="display:flex;">
+      <label>商家提供运输服务</label>
+      <view  class='buy_checkbox'>
+        <checkbox></checkbox>
+      </view>
+    </view>
+    <view class='box_border box_bot' style="display:flex;">
+      <label>商家提供装货服务</label>
+      <view  class='buy_checkbox'>
+        <checkbox></checkbox>
+      </view>
+    </view>
+    <view class='box_border' style="display:flex;">
+      <label>商家提供卸货服务</label>
+      <view  class='buy_checkbox'>
+        <checkbox></checkbox>
+      </view>
     </view>
   </view>
   <!-- 安全要求 -->
   <view class='sell_safety content_pad bc_whrite'>
     <view class='box_bot'>安全要求(<text class='red'>必填</text>)</view>
-    <view class='box_border box_bot'>要求平台担保交易</view>
-    <view class='box_border box_bot'>要求实名买家</view>
-    <view class='box_border box_bot'>要求会员买家</view>
-    <view class='box_border box_bot'>买家最低押金 1000</view>
-    <view class='box_border deposit green'>*押金用于违约时对您的赔偿</view>
-  </view>
-  <!-- 上传照片 -->
-  <view class='sell_upimg content_pad bc_whrite'>
-    <view class='box_bot'>上传照片(<text class='red'>必填</text></view>
-    <view class='pic'>
-      <image class='btn_upload' src='../../images/btn_upload.png'></image>
+    <!-- <view class='box_border box_bot'>要求平台担保交易</view> -->
+    <view class='box_border box_bot'>要求实名买家
+      <view  class='buy_checkbox'>
+        <checkbox></checkbox>
+      </view>
     </view>
-    <view class='introduce'>请上传木材图片，支持多张上传；建议上传截面图、正面、侧面、量尺寸宽厚照片，以便买家更直观的了解，促成交易。</view>
+    <view class='box_border box_bot'>要求平台担保交易
+      <view  class='buy_checkbox'>
+        <checkbox></checkbox>
+      </view>
+    </view>
+      <view class='box_border box_bot'>要求VIP会员
+        <view  class='buy_checkbox'>
+        <checkbox></checkbox>
+      </view>
+    </view>
+    <view class='box_border box_bot'>商家押金 1000
+      <text class='buy_checkbox'>元</text>
+    </view>
+    <view class='box_border deposit green'>*押金用于违约时对您的赔偿</view>
   </view>
   <!-- 备注 -->
   <view class='sell_remark content_pad bc_whrite'>
@@ -86,7 +111,7 @@
   </view>
   <!-- 按钮 -->
   <view class="btn-area">
-    <button formType="submit" class='bc_green'>发布供货</button>
+    <button formType="submit" class='bc_green'>发布求购</button>
   </view>
 </form>
 </view>

@@ -35,17 +35,12 @@
   width: 100%;
   margin-left: -24rpx;
 }
-/* 上传照片 */
-.sell .sell_upimg{
-  margin-bottom: 20rpx;
-}
-.sell .sell_upimg .pic{
-
-}
-.sell .sell_upimg .introduce{
-  
-}
 /* 备注 */
 .sell .sell_remark textarea{
   font-size: 28rpx;
+}
+.buy_checkbox{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left:360rpx
 }
