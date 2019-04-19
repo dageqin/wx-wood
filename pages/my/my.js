@@ -1,36 +1,11 @@
-// pages/index/index.js
+// pages/my/my.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      trees:[
-        {
-          src:'',
-          treename:'铁杉',
-          price:'￥1300元/立方米',
-          num: 100000,
-          address:'临汾市',
-          updatedate:'2019-04-16 15:16:01',
-          personname:'Kiki',
-          vip:'LV3',
-          pledge:1000,
-          vertify: true
-        },
-        {
-          src: '',
-          treename: '铁杉',
-          price: '￥1300元/立方米',
-          num: 100000,
-          address: '临汾市',
-          updatedate: '2019-04-16 15:16:01',
-          personname: 'Kiki',
-          vip: '未开通',
-          pledge: 1000,
-          vertify: false
-        }
-      ]
+
   },
 
   /**

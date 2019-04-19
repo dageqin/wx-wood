@@ -1,0 +1,52 @@
+/* pages/index_sell_detail/sell_detail.wxss */
+.sell{
+  width: 100%;
+  font-size: 30rpx;
+}
+.content_pad{
+  padding: 30rpx 24rpx;
+}
+.box_bot{
+  margin-bottom: 30rpx;
+}
+/* 选择供应类型 */
+.sell .sell_type{
+  margin-bottom: 20rpx;
+}
+/* 基本信息 */
+.sell .sell_basic{
+  margin-bottom: 20rpx;
+}
+/* 供应信息 */
+.sell .sell_info{
+  margin-bottom: 20rpx;
+}
+.sell .sell_info view label{
+  padding-top:6rpx;
+}
+/* 安全要求 */
+.sell .sell_safety{
+  margin-bottom: 20rpx;
+}
+.sell .sell_safety .deposit{
+  background-color: #d7f2d5;
+  height: 94rpx;
+  line-height: 94rpx;
+  width: 100%;
+  margin-left: -24rpx;
+}
+/* 上传照片 */
+.sell .sell_upimg{
+  margin-bottom: 20rpx;
+}
+.sell .sell_upimg .pic{
+
+}
+.sell .sell_upimg .introduce{
+  
+}
+/* 备注 */
+.sell .sell_remark textarea{
+  font-size: 28rpx;
+}
+

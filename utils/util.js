@@ -14,6 +14,33 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+// 调接口
+var app = getApp();
+const request = (url, postData, doSuccess, doFail, doComplete) => {
+  var host = getApp().conf.host;
+  wx.request({
+    url: host + url,
+    data: postData,
+    method: 'POST',
+    success: function (res) {
+      if (typeof doSuccess == "function") {
+        doSuccess(res);
+      }
+    },
+    fail: function () {
+      if (typeof doFail == "function") {
+        doFail();
+      }
+    },
+    complete: function () {
+      if (typeof doComplete == "function") {
+        doComplete();
+      }
+    }
+  });
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  request: request
 }

@@ -1,30 +1,32 @@
 {
   "pages": [
-    "pages/main/sell/index/index",
-    "pages/main/buy/index/index",
-    "pages/msg/index/index",
-    "pages/my/index/index"
+    "pages/index/index",
+    "pages/index_buy_detail/buy_detail",
+    "pages/index_sell_detail/sell_detail",
+    "pages/index_sell_detail_category/category",
+    "pages/msg/msg",
+    "pages/my/my"
 
   ],
   "tabBar": {
-    "color":"#",
+    "color":"",
     "selectedColor":"#50ab43",
     "backgroundColor": "#ededed",
     "list": [
       {
-        "pagePath": "pages/main/sell/index/index",
+        "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath":"./images/main_home_off.png",
         "selectedIconPath":"./images/main_home_on.png"
       },
       {
-        "pagePath": "pages/msg/index/index",
+        "pagePath": "pages/msg/msg",
         "text": "消息",
         "iconPath": "./images/main_message_off.png",
         "selectedIconPath": "./images/main_message_on.png"
       },
       {
-        "pagePath": "pages/my/index/index",
+        "pagePath": "pages/my/my",
         "text": "我的",
         "iconPath": "./images/main_mine_off.png",
         "selectedIconPath": "./images/main_mine_on.png"

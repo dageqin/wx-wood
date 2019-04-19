@@ -1,0 +1,198 @@
+/* pages/index/index.wxss */
+.index{
+  background-color: #efeff4;
+}
+.index_head{
+  width: 100%;
+  height: 372rpx;
+  line-height: 372rpx;
+  background-color: #50ab43;
+  font-size: 70rpx;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.index_head_href{
+    width: 180rpx;
+    height: 70rpx;
+    border-radius: 38rpx;
+    color: #50ab43;
+    background-color: #fff;
+    position: absolute;
+    top:31rpx;
+    right:24rpx;
+    font-size: 31rpx;
+    text-align: center;
+    line-height: 70rpx;
+}
+/* part_sell */
+.sell_detail_item{
+  background-color: #fff;
+  width: 750rpx;
+  height: 430rpx;
+  margin-top: 20rpx;
+  padding-top: 50rpx;
+  padding-bottom: 31rpx;
+}
+.sell_detail_item .item_header{
+    position: relative;
+}
+.sell_detail_item .item_header image{
+   position: absolute;
+   top:-50rpx;
+   right: 50rpx;
+   width: 60rpx;
+   height: 130rpx;
+}
+.sell_detail_item .item_content{
+    font-size: 29rpx;
+    margin-top: 31rpx;
+    padding-bottom: 62rpx;
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+    border-bottom: 1px solid #e0e0e0;
+}
+.sell_detail_item .item_content view .img{
+    float: left;
+    width: 241rpx;
+    height: 172rpx;
+    background-color: #50ab43;
+    margin-right: 31rpx;
+}
+.sell_detail_item .item_content view .img image{
+    width: 100%;
+    height: 100%;
+}
+.sell_detail_item .item_content view .item{
+  line-height: 44rpx;
+}
+.sell_detail_item .item_content view .item .price{
+  color: #f46b10;
+}
+/* 资质 */
+.sell_detail_item .item_footer{
+    padding-top: 29rpx;
+    padding-bottom: 31rpx;
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+    width: 702rpx;
+}
+
+.sell_detail_item .item_footer .footer_left .footer_row{
+  height: 46rpx;
+  width: 520rpx;
+}
+.sell_detail_item .item_footer .footer_left .footer_row .row_item{
+  width: 140rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  /* background-color: yellow; */
+  display: inline-block;
+}
+.sell_detail_item .item_footer .footer_left .footer_row .itemvip{
+  width: 96rpx;
+}
+.sell_detail_item .item_footer .footer_left .footer_row .row_item image{
+  width: 31rpx;
+  height: 31rpx;
+}
+.sell_detail_item .item_footer .footer_left .footer_row .row_item text{
+   font-size: 20rpx;
+   line-height: 34rpx;
+}
+.sell_detail_item .item_footer .footer_left .footer_row .personname{
+  font-size: 27rpx;
+}
+/* 查看详情按钮 */
+.sell_detail_item .item_footer .footer_right{
+  width: 166rpx;
+  height: 69rpx;
+  margin-top: 24rpx;
+}
+.sell_detail_item .item_footer .footer_right image{
+  width: 166rpx;
+  height: 69rpx;
+}
+
+/* part buy */
+/* 详情 */
+.buy_detail_item{
+  background-color: #fff;
+  width: 750rpx;
+  /* height: 430rpx; */
+  margin-top: 20rpx;
+  padding-top: 50rpx;
+  padding-bottom: 31rpx;
+}
+.buy_detail_item .item_header{
+    position: relative;
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+}
+.buy_detail_item .item_header image{
+   position: absolute;
+   top:-50rpx;
+   right: 50rpx;
+   width: 60rpx;
+   height: 130rpx;
+}
+/* detail */
+.buy_detail_item .item_content{
+    font-size: 29rpx;
+    margin-top: 31rpx;
+    width: 750rpx;
+    height: 240rpx;
+    padding-bottom: 22rpx;
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+    border-bottom: 1px solid #e0e0e0;
+}
+.buy_detail_item .item_content view{
+   height: 40rpx;
+   width: 702rpx;
+   margin-bottom: 20rpx;
+}
+
+/* status、button */
+.buy_detail_item .item_footer{
+    padding-top: 76rpx;
+    padding-bottom: 28rpx;
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+    width: 750rpx;
+    /* height: 180rpx; */
+    /* background-color: red; */
+}
+
+/* status */
+.buy_detail_item .item_footer .status{
+  width: 50%;
+  height: 70rpx;
+}
+.buy_detail_item .item_footer .color_text{
+    color:#f46b01;
+}
+/* 查看详情按钮 */
+.buy_detail_item .item_footer .btn{
+  width: 50%;
+}
+.buy_detail_item .item_footer .btn .footer_right{
+    margin-left:60rpx;
+}
+.buy_detail_item .item_footer .btn .footer_right image{
+  width: 166rpx;
+  height: 69rpx;
+}
+
+
+
+
+
+/* load all */
+.loadAll{
+    width: 750rpx;
+    padding: 42rpx 0;
+    text-align: center;
+    color: #999;
+    font-size: 24rpx;
+}

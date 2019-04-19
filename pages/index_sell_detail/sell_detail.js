@@ -1,26 +1,17 @@
-// pages/index/index.js
+// pages/index_sell_detail/sell_detail.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-      trees:[
-        {
-          num: 100000,
-          address:'临汾市',
-          date:'2019-04-16 15:16:01',
-          size:'长：5.7m，宽125mm,厚33mm',
-        },
-        {
-          num: 100000,
-          address: '临汾市',
-          date: '2019-04-16 15:16:01',
-          size: '长：5.7m，宽125mm,厚33mm',
-        }
-      ]
+    notSelected: true,
+    category_children:[]
   },
 
+  formSubmit: function (e) {
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+  },
+  
   /**
    * 生命周期函数--监听页面加载
    */

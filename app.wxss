@@ -1,6 +1,16 @@
 .gray{
   color: #999;
 }
+.red{
+  color: #ff0000;
+}
+.green{
+  color: #50ab43;
+}
+.box_border{
+  border: 1px solid #d6d6d6;
+  padding: 24rpx;
+}
 .flex-wrp {
   display: flex;
 }
@@ -12,4 +22,94 @@
 }
 .bc_green{
   background-color: #50ab43;
+}
+.bc_whrite{
+  background-color: #fff;
+}
+/* 添加按钮 */
+.btn_add{
+  width: 80rpx;
+  height: 80rpx;
+  /* background-color: yellow; */
+  position: fixed;
+  bottom: 30rpx;
+  right: 20rpx;
+}
+.btn_add image{
+  width: 80rpx;
+  height: 80rpx;
+}
+/* 遮罩层 */
+.shade{
+  width: 100%;
+  height: 100%;
+  background-color: #efeff4;
+  /* display: block; */
+  /* z-index: 2; */
+  position: fixed;
+  top:0;
+  left: 0;
+  overflow: hidden;
+}
+.btn_buy{
+  position: fixed;
+  bottom: 40rpx;
+  left: 25%;
+}
+.btn_sell{
+  position: fixed;
+  bottom: 40rpx;
+  right: 25%;
+}
+.btn_buy view, .btn_sell view{
+  font-size: 29rpx;
+}
+.btn_buy image, .btn_sell image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 20rpx;
+}
+/* 右箭头 */
+.btn_right{
+  width: 16rpx;
+  height: 26rpx;
+  float:right;
+}
+.btn_upload{
+  width: 182rpx;
+  height: 136rpx;
+}
+.row_input{
+  margin-left:20rpx;
+  width:78%;
+}
+.hide{
+  display: none;
+}
+.nav_right{
+  width: 20rpx;
+  height: 30rpx;
+  float:right;
+}
+/* 底部按钮区域 */
+.btn-area{
+  height: 114rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.btn-area button{
+  height: 114rpx;
+  width: 100%;
+  font-size: 36rpx;
+  color: #fff;
+  line-height: 114rpx;
+}
+/* 选择框 */
+.item_checkbox{
+  float: right;
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: -50rpx;
 }

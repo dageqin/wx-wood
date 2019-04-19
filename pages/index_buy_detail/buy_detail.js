@@ -1,4 +1,4 @@
-// pages/msg/index/index.js
+// pages/index_buy_detail/buy_detail.js
 Page({
 
   /**

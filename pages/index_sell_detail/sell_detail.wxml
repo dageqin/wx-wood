@@ -1,0 +1,92 @@
+<!--pages/index_sell_detail/sell_detail.wxml-->
+<view class='sell bc_gray'>
+<form bindsubmit="formSubmit">
+  <!-- 选择供应类型 -->
+  <view class='sell_type content_pad bc_whrite'>
+    <view class='box_bot'>选择供应类型(<text class='red'>必填</text>)</view>
+    <view class='box_border box_bot'>选择分类
+      <navigator class='nav_right' url='../index_sell_detail_category/category'>
+        <image class='btn_right' src='../../images/btn_right.png'></image>
+      </navigator>
+    </view>
+    <view class='box_border'>品名
+      <image class='btn_right' src='../../images/btn_right.png'></image>
+    </view>
+  </view>
+  <!-- 基本信息 -->
+  <view class='sell_basic content_pad bc_whrite'>
+    <view class='box_bot'>基本信息(<text class='red'>必填</text>)</view>
+    <view class='gray' wx:if='{{notSelected}}'>请选择求购产品分类、品名</view>
+    <view wx:if='{{!notSelected}}'>
+      <view class='box_border box_bot'>
+        <text>长度</text>
+        <text>至</text>
+        <text>毫米</text>
+      </view>
+      <view class='box_border box_bot'>
+        <text>宽度</text>
+        <text>至</text>
+        <text>毫米</text>
+      </view>
+      <!-- <view class='box_border box_bot'>厚度</view> -->
+      <view class='box_border box_bot'>
+        <text>径级</text>
+        <text>至</text>
+        <text>毫米</text>
+      </view>
+      <!-- <view class='box_border box_bot'>可全填或者只填写一项</view>
+      <view class='box_border'>名称</view> -->
+    </view>
+  </view>
+  <!-- 供应信息 -->
+  <view class='sell_info content_pad bc_whrite'>
+    <view class='box_bot'>供应信息(<text class='red'>必填</text>)</view>
+    <view class='box_border box_bot'>
+      <text>供应数量</text>
+      <text>立方</text>
+      <image class='btn_right' src='../../images/btn_right.png'></image>
+    </view>
+    <view class='box_border box_bot'>请选择交货地址
+      <image class='btn_right' src='../../images/btn_right.png'></image>
+    </view>
+    <view class='box_border box_bot' style="display:flex;">
+      <label>详细地址</label>
+      <input class='row_input' name='detailadd' />
+    </view>
+    <view class='box_border box_bot' style="display:flex;">
+      <label>联系人</label>
+      <input class='row_input' name='Contact' />
+    </view>
+    <view class='box_border' style="display:flex;">
+      <label>联系电话</label>
+      <input class='row_input' name='phone' />
+    </view>
+  </view>
+  <!-- 安全要求 -->
+  <view class='sell_safety content_pad bc_whrite'>
+    <view class='box_bot'>安全要求(<text class='red'>必填</text>)</view>
+    <view class='box_border box_bot'>要求平台担保交易</view>
+    <view class='box_border box_bot'>要求实名买家</view>
+    <view class='box_border box_bot'>要求会员买家</view>
+    <view class='box_border box_bot'>买家最低押金 1000</view>
+    <view class='box_border deposit green'>*押金用于违约时对您的赔偿</view>
+  </view>
+  <!-- 上传照片 -->
+  <view class='sell_upimg content_pad bc_whrite'>
+    <view class='box_bot'>上传照片(<text class='red'>必填</text></view>
+    <view class='pic'>
+      <image class='btn_upload' src='../../images/btn_upload.png'></image>
+    </view>
+    <view class='introduce'>请上传木材图片，支持多张上传；建议上传截面图、正面、侧面、量尺寸宽厚照片，以便买家更直观的了解，促成交易。</view>
+  </view>
+  <!-- 备注 -->
+  <view class='sell_remark content_pad bc_whrite'>
+    <view class='box_bot'>备注</view>
+    <textarea class='box_border' name='remark' placeholder="请填写夹皮、皮色、节巴、新旧等其他要求信息"  />
+  </view>
+  <!-- 按钮 -->
+  <view class="btn-area">
+    <button formType="submit" class='bc_green'>发布供货</button>
+  </view>
+</form>
+</view>

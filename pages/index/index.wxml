@@ -1,0 +1,141 @@
+<view class='index'>
+  <!-- 供应部分 sell -->
+  <view class='part_sell' wx:if='{{showBuy}}'>
+    <view class="index_head">
+        <text>今日供应90单</text>
+    </view>
+    <view class="index_head_href" bindtap='changeBuy'>今日求购</view>
+    <!-- <navigator class="index_head_href"
+    url="../../buy/index/index"
+    hover-class="navigator-hover" >
+    今日求购
+    </navigator> -->
+    <view class="sell_detail">
+      <view class="sell_detail_item" wx:for="{{trees}}" wx:key="key">
+          <view class="item_header">
+            <text>供应：</text>
+            <text>{{item.treename}}</text>
+            <image src='../../images/main_sell_label.png'></image>
+          </view>
+          <!-- 价格等信息 -->
+          <view class="item_content">
+            <view>
+              <view class='img'>
+                 <image src="{{item.src}}"></image>
+              </view>
+              <view class='item'>价格:<text class="price">{{item.price}}</text></view>
+              <view class='item'>库存量:<text class="num gray">{{item.num}}</text></view>
+              <view class='item'>存货地:<text class="address gray">{{item.address}}</text></view>
+              <view class='item'>更新时间:<text class="updatedate gray">{{item.updatedate}}</text></view>
+              </view>
+          </view>
+          <!-- 认证等信息 -->
+          <view class='item_footer flex-wrp' style="flex-direction:row;">
+           <!-- 验证过的 -->
+            <view class='footer_left' wx:if="{{item.vertify}}">
+              <view class='footer_row'>
+                <text class='personname gray'>{{item.personname}}</text>
+              </view>
+              <view class='footer_row'>
+                <view class='row_item itemvip'>
+                  <image src='../../images/user_vip_4.png'></image>
+                 <text>{{item.vip}}</text>
+               </view>
+               <view class='row_item'>
+                  <image src='../../images/user_pledge_1.png'></image>
+                  <text>{{item.pledge}}元</text>
+              </view>
+              <view class='row_item'>
+                  <image src='../../images/user_personal_1.png'></image>
+                  <text>个人认证</text>
+              </view>
+              <view class='row_item'>
+                  <image src='../../images/user_enterprise_1.png'></image>
+                  <text>企业认证</text>
+              </view>
+              </view>
+            </view>
+            <!-- 未验证 -->
+            <view class='footer_left' wx:if="{{!item.vertify}}">
+              <view class='footer_row'>
+                <text class='personname gray'>{{item.personname}}</text>
+              </view>
+              <view class='footer_row'>
+                <view class='row_item'>
+                  <image src='../../images/user_vip_0.png'></image>
+                 <text class='gray'>未开通</text>
+               </view>
+               <view class='row_item'>
+                  <image src='../../images/user_pledge_0.png'></image>
+                  <text class='noVertidy'>未缴纳</text>
+              </view>
+              <view class='row_item'>
+                  <image src='../../images/user_personal_0.png'></image>
+                  <text class='gray'>未认证</text>
+              </view>
+              </view>
+            </view>
+            <!-- 查看详情按钮 -->
+            <navigator class='footer_right' url=''>
+                <image src='../../images/main_button_detail.png'></image>
+            </navigator>
+          </view>
+            </view>
+          </view>
+    </view>
+
+
+  <!-- 求购部分 buy -->
+  <view class='part_buy'  wx:if='{{!showBuy}}'>
+    <view class="index_head">
+      <text>今日求购55单</text>
+    </view>
+    <view class="index_head_href" bindtap='changeBuy'>今日供应</view>
+    <!-- 求购详情 -->
+    <view class="buy_detail">
+      <view class="buy_detail_item" wx:for="{{trees}}" wx:key="key">
+          <view class="item_header">
+            <text>求购：</text>
+            <text>{{item.treename}}</text>
+            <image src='../../images/main_buy_label.png'></image>
+          </view>
+          <!-- 求购详细信息 -->
+          <view class="item_content"> 
+              <view>求购数量：<text class='gray'>{{item.num}}立方米</text></view>
+              <view>发布时间：<text class='gray'>{{item.date}}</text></view>
+              <view>规格：<text class='gray'>{{item.size}}</text></view>
+              <view>交货地：<text class='gray'>{{item.address}}</text></view>
+          </view>
+          <!-- 状态+按钮 -->
+          <view class='item_footer flex-wrp' style="flex-direction:row;">
+              <view class='status'>状态：<text class='color_text'>买家求购中</text></view>
+              <view class='btn'>
+                <!-- 查看详情按钮 -->
+                <navigator class='footer_right' url=''>
+                    <image src='../../images/main_button_quote.png'></image>
+                </navigator>
+                <view>已有<text>3</text>家参入报价</view>
+              </view>
+          </view>
+      </view>
+    </view>
+  </view>
+
+    <!-- 加载完毕 -->
+  <view class='loadAll bg_gray'>已加载完全部</view>
+  <view class='btn_add' bindtap="change">
+    <image src='../../images/btn_add.png'></image>
+  </view>
+   <!-- 遮罩层 -->
+  <view class='shade' bindtap="change" wx:if='{{showShade}}'></view>
+  <view class='shade_btn' wx:if='{{showShade}}'>
+    <navigator class='btn_buy' url="../index_buy_detail/buy_detail">
+      <image src='../../images/btn_buy.png'></image>
+        <view>发布求购</view>
+    </navigator>
+    <navigator class='btn_sell' url="../index_sell_detail/sell_detail">
+      <image src='../../images/btn_sell.png'></image>
+      <view>发布供应</view>
+    </navigator>
+  </view>
+</view>
