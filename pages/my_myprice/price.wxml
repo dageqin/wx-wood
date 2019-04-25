@@ -1,0 +1,105 @@
+<!--pages/my_myprice/price.wxml-->
+<view class='wrap bc_gray'>
+  <view class='mid border_bt'>
+    <view class='title'>
+      <text class='green'>求购：</text>
+      <text>樟子松</text>
+    </view>
+    <view class='content flex-wrp'>
+      <view class='left'>
+        <view class='item'>
+          <text class='item_title'>求购数量：</text>
+          <text class='item_content'>200立方米</text>
+        </view>
+        <view class='item'>
+          <text class='item_title'>规格：</text>
+          <text class='item_content'>长:5.7m,宽:152mm,厚:30mm</text>
+        </view>
+      </view>
+      <view class='right'>
+        <view class='item'>
+          <text class='item_title'>发布时间：</text>
+          <text class='item_content'>2018-11-12 12:30</text>
+        </view>
+        <view class='item'>
+          <text class='item_title'>交货地：</text>
+          <text class='item_content'>大连市</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='detail'>
+    <view class='top border_bt'>
+      <text class='top_left'>刷新时间：2018-07-03 12：30</text>
+    </view>
+    <view class='detail_mid flex-wrp border_bt'>
+      <view class='mid_left'>
+        <view>货款：</view>
+        <view>运费：</view>
+        <view>装货费用：</view>
+        <view>卸货费用：</view>
+        <view>优惠：</view>
+        <view>发货地：</view>
+        <view>在途：</view>
+      </view>
+      <view class='mid_right'>
+        <view>
+          640，000
+          <text>元</text>
+        </view>
+        <view>
+          5000
+          <text>元</text>
+        </view>
+        <view>
+          5000
+          <text>元</text>
+        </view>
+        <view>
+          5000
+          <text>元</text>
+        </view>
+        <view>
+          5000
+          <text>元</text>
+        </view>
+        <view>
+          四川省成都市龙泉驿区
+        </view>
+        <view>
+          5
+          <text>天</text>
+        </view>
+      </view>
+    </view>
+    <view class='detail_total flex-wrp border_bt'>
+      <view>
+        <text class='yellow'>总金额：</text> 641000元
+      </view>
+      <view class='btn_yellow'>立即发货</view>
+    </view>
+  </view>
+  <view class='remark_green'>对方已将货款打入平台托管账户，请放心发货</view>
+  <!-- 按钮组 -->
+  <view class='btn_group'>
+    <view class='btn_row'>
+      <text class='btn_gray'>未中标</text>
+    </view>
+    <view class='btn_row'>
+      <text class='btn_yellow'>提醒买家支付</text>
+      <text class='btn_yellow'>等待买家支付</text>
+      <text class='btn_yellow'>等待买家收货</text>
+    </view>
+    <view class='btn_row'>
+      <text class='btn_yellow'>交易完成</text>
+    </view>
+  </view>
+  <view class='remark_green'>
+    对方未将货款打入平台托管账户，脱离平台担保体系，私下交易风险较高，请谨慎操作
+  </view>
+
+
+
+
+
+</view>

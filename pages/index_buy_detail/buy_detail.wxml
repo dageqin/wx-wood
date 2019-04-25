@@ -1,118 +1,160 @@
 <!--pages/index_buy_detail/buy_detail.wxml-->
 <view class='sell bc_gray'>
-<form bindsubmit="formSubmit">
-  <!-- 选择供应类型 -->
-  <view class='sell_type content_pad bc_whrite'>
-    <view class='box_bot'>选择求购类型(<text class='red'>必填</text>)</view>
-    <view class='box_border box_bot'>选择分类
-      <navigator class='nav_right' url='../index_sell_detail_category/category'>
+  <form bindsubmit="formSubmit">
+    <!-- 选择供应类型 -->
+    <view class='sell_type content_pad bc_whrite'>
+      <view class='box_bot'>选择求购类型(
+        <text class='red'>必填</text>)</view>
+      <view class='box_border' bindtap='showCategory' style='margin-bottom: 30rpx;'>
+        选择分类
+        <!-- <navigator class='nav_right' url='../index_sell_detail_category/category'> -->
+          <image class='btn_right' src='../../images/btn_right.png'></image>
+        <!-- </navigator> -->
+      </view>
+      <view class='box_border'>品名
         <image class='btn_right' src='../../images/btn_right.png'></image>
-      </navigator>
+      </view>
     </view>
-    <view class='box_border'>品名
-      <image class='btn_right' src='../../images/btn_right.png'></image>
-    </view>
-  </view>
-  <!-- 基本信息 -->
-  <view class='sell_basic content_pad bc_whrite'>
-    <view class='box_bot'>基本信息(<text class='red'>必填</text>)</view>
-    <view class='gray' wx:if='{{notSelected}}'>请选择求购产品分类、品名</view>
-    <view wx:if='{{!notSelected}}'>
-      <view class='box_border box_bot'>
-        <text>长度</text>
-        <text>至</text>
-        <text>毫米</text>
-      </view>
-      <view class='box_border box_bot'>
-        <text>宽度</text>
-        <text>至</text>
-        <text>毫米</text>
-      </view>
-      <!-- <view class='box_border box_bot'>厚度</view> -->
-      <view class='box_border box_bot'>
-        <text>径级</text>
-        <text>至</text>
-        <text>毫米</text>
-      </view>
-      <!-- <view class='box_border box_bot'>可全填或者只填写一项</view>
+    <!-- 基本信息 -->
+    <view class='sell_basic content_pad bc_whrite'>
+      <view class='box_bot'>基本信息(
+        <text class='red'>必填</text>)</view>
+      <view class='gray' wx:if='{{notSelected}}'>请选择求购产品分类、品名</view>
+      <view wx:if='{{!notSelected}}'>
+        <view class='box_border box_bot'>
+          <text class='long'>长度</text>
+          <input></input>
+          <text>至</text>
+          <input></input>
+          <text>毫米</text>
+        </view>
+        <view class='box_border box_bot'>
+          <text class='long'>宽度</text>
+          <input></input>
+          <text>至</text>
+          <input></input>
+          <text>毫米</text>
+        </view>
+        <!-- <view class='box_border box_bot'>厚度</view> -->
+        <view class='box_border box_bot'>
+          <text class='long'>径级</text>
+          <input></input>
+          <text>至</text>
+          <input></input>
+          <text>毫米</text>
+        </view>
+        <!-- <view class='box_border box_bot'>可全填或者只填写一项</view>
       <view class='box_border'>名称</view> -->
-    </view>
-  </view>
-  <!-- 求购信息 -->
-  <view class='sell_info content_pad bc_whrite'>
-    <view class='box_bot'>求购信息(<text class='red'>必填</text>)</view>
-    <view class='box_border box_bot'>
-      <text>求购数量</text>
-      <text>立方</text>
-      <image class='btn_right' src='../../images/btn_right.png'></image>
-    </view>
-    <view class='box_border box_bot'>请选择交货地址
-      <image class='btn_right' src='../../images/btn_right.png'></image>
-    </view>
-    <view class='box_border box_bot' style="display:flex;">
-      <label>详细地址</label>
-      <input class='row_input' name='detailadd' />
-    </view>
-    <view class='box_border box_bot' style="display:flex;">
-      <label>联系人</label>
-      <input class='row_input' name='Contact' />
-    </view>
-    <view class='box_border box_bot' style="display:flex;">
-      <label>联系电话</label>
-      <input class='row_input' name='phone' />
-    </view>
-    <view class='box_border box_bot' style="display:flex;">
-      <label>商家提供运输服务</label>
-      <view  class='buy_checkbox'>
-        <checkbox></checkbox>
       </view>
     </view>
-    <view class='box_border box_bot' style="display:flex;">
-      <label>商家提供装货服务</label>
-      <view  class='buy_checkbox'>
-        <checkbox></checkbox>
+    <!-- 求购信息 -->
+    <view class='sell_info content_pad bc_whrite'>
+      <view class='box_bot'>求购信息(
+        <text class='red'>必填</text>)</view>
+      <view class='box_border box_bot'>
+        <text class='long'>求购数量</text>
+        <text style='margin-left:400rpx;border-left:1px solid #d6d6d6;'>立方</text>
+        <image class='btn_right num_right' src='../../images/btn_right.png'></image>
+      </view>
+      <view class='box_border box_bot'>
+        <text class='address' wx:if='{{!areaInfo.length}}'>请选择交货地址</text>
+        <text class='address' wx:if='{{areaInfo.length}}'>{{areaInfo}}</text>
+        <image class='btn_right' src='../../images/btn_right.png' bindtap='selectDistrict'></image>
+      </view>
+      <view class='box_border box_bot' style="display:flex;">
+        <label>详细地址</label>
+        <input class='row_input' name='detailadd' />
+      </view>
+      <view class='box_border box_bot' style="display:flex;">
+        <label>联系人</label>
+        <input class='row_input' name='Contact' />
+      </view>
+      <view class='box_border box_bot' style="display:flex;">
+        <label>联系电话</label>
+        <input class='row_input' name='phone' />
+      </view>
+      <view class='box_border box_bot' style="display:flex;">
+        <label>商家提供运输服务</label>
+        <view class='buy_checkbox'>
+          <checkbox></checkbox>
+        </view>
+      </view>
+      <view class='box_border box_bot' style="display:flex;">
+        <label>商家提供装货服务</label>
+        <view class='buy_checkbox'>
+          <checkbox></checkbox>
+        </view>
+      </view>
+      <view class='box_border' style="display:flex;">
+        <label>商家提供卸货服务</label>
+        <view class='buy_checkbox'>
+          <checkbox></checkbox>
+        </view>
       </view>
     </view>
-    <view class='box_border' style="display:flex;">
-      <label>商家提供卸货服务</label>
-      <view  class='buy_checkbox'>
-        <checkbox></checkbox>
+    <!-- 安全要求 -->
+    <view class='sell_safety content_pad bc_whrite'>
+      <view class='box_bot'>安全要求(
+        <text class='red'>必填</text>)</view>
+      <!-- <view class='box_border box_bot'>要求平台担保交易</view> -->
+      <view class='box_border box_bot'>
+        <text class='real_name'>要求实名买家</text>
+        <view class='buy_checkbox'>
+          <checkbox></checkbox>
+        </view>
       </view>
-    </view>
-  </view>
-  <!-- 安全要求 -->
-  <view class='sell_safety content_pad bc_whrite'>
-    <view class='box_bot'>安全要求(<text class='red'>必填</text>)</view>
-    <!-- <view class='box_border box_bot'>要求平台担保交易</view> -->
-    <view class='box_border box_bot'>要求实名买家
-      <view  class='buy_checkbox'>
-        <checkbox></checkbox>
+      <view class='box_border box_bot'>要求平台担保交易
+        <view class='buy_checkbox'>
+          <checkbox></checkbox>
+        </view>
       </view>
-    </view>
-    <view class='box_border box_bot'>要求平台担保交易
-      <view  class='buy_checkbox'>
-        <checkbox></checkbox>
+      <view class='box_border box_bot'>
+        <text class='real_name'>要求VIP会员</text>
+        <view class='buy_checkbox'>
+          <checkbox></checkbox>
+        </view>
       </view>
-    </view>
-      <view class='box_border box_bot'>要求VIP会员
-        <view  class='buy_checkbox'>
-        <checkbox></checkbox>
+      <view class='box_border box_bot'>
+        <text class='money'>商家押金</text>
+        <input class='row_input'>1000</input>
+        <text class='buy_checkbox'>元</text>
       </view>
+      <view class='box_border deposit green'>*押金用于违约时对您的赔偿</view>
     </view>
-    <view class='box_border box_bot'>商家押金 1000
-      <text class='buy_checkbox'>元</text>
+    <!-- 备注 -->
+    <view class='sell_remark content_pad bc_whrite'>
+      <view class='box_bot'>备注</view>
+      <textarea class='box_border box_bot' name='remark' placeholder="可填写夹皮、皮色、结疤、新旧等其他要求信息，为了防止触发百度防作弊规则，禁止出现手机号、微信号、QQ等敏感信息。" />
     </view>
-    <view class='box_border deposit green'>*押金用于违约时对您的赔偿</view>
-  </view>
-  <!-- 备注 -->
-  <view class='sell_remark content_pad bc_whrite'>
-    <view class='box_bot'>备注</view>
-    <textarea class='box_border' name='remark' placeholder="请填写夹皮、皮色、节巴、新旧等其他要求信息"  />
-  </view>
-  <!-- 按钮 -->
-  <view class="btn-area">
-    <button formType="submit" class='bc_green'>发布求购</button>
-  </view>
-</form>
-</view>
+    <!-- 绿色提示语 -->
+    <view class='box_border tips green box_bot'>求购信息有效期为审核通过之后的7天，您可以在个人中心延长有效期；信息根据最新刷新时间排序，您可以在个人中心中定期刷新以提高排名。</view>
+    <!-- 按钮 -->
+    <view class="btn-area">
+      <button formType="submit" class='bc_green'>发布求购</button>
+    </view>
+  </form>
 
+  <!-- 选择城市控件 -->
+  <view class="picker-view" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+    <view style="height:10% ;width:95%;margin-top:10rpx">
+      <text catchtap="cityCancel">取消</text>
+      <text style="float: right" catchtap="citySure">确定</text>
+    </view>
+    <!--"可以显示默认的城市，使用后级联选择城市反应很慢就不使用了-->
+    <picker-view style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+      <picker-view-column>
+        <view wx:for="{{provinces}}" class="picker-item">
+          {{item.name}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{citys}}" class="picker-item" wx:key="">
+          {{item.name}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{areas}}" class="picker-item" wx:key="">
+          {{item.name}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+
+</view>

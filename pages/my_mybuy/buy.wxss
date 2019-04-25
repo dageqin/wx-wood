@@ -1,0 +1,65 @@
+/* pages/my_mybuy/buy.wxss */
+.wrap .one{
+   margin-bottom: 20rpx;
+}
+.wrap .top{
+  font-size: 27rpx;
+  background-color: #fbfbfb;
+  padding: 30rpx 24rpx;
+}
+.wrap .top .top_left{
+  color: #ccc;
+  padding-right:132rpx;
+}
+.wrap .top .top_right{
+  text-align: right;
+}
+/* 详情部分 */
+.wrap .mid{
+  padding: 50rpx 25rpx;
+  position: relative;
+  background-color: #fff;
+}
+.wrap .mid .mid_img{
+  position: absolute;
+  top: 0;
+  right: 24rpx;
+  width: 50rpx;
+  height: 112rpx;
+}
+.wrap .mid .title{
+  font-size: 32repx;
+}
+.wrap .mid .content{
+  width: 100%;
+  font-size: 30rpx;
+}
+.wrap .mid .content .left{
+  width: 46%;
+}
+.wrap .mid .content .right{
+  width: 46%;
+}
+/* 按钮组部分 */
+.wrap .btn{
+  width: 100%;
+  color: #999;
+  padding: 30rpx 24rpx;
+  font-size: 24rpx;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  justify-content:flex-end;
+}
+.wrap .btn view{
+  margin-left: 20rpx;
+  padding: 30rpx;
+  border: 1px solid  #999;
+}
+.wrap .btn .price{
+  border: none;
+}
+
+/* 公共部分 */
+.item .item_content{
+  color: #999;
+}

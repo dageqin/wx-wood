@@ -1,0 +1,56 @@
+/* pages/my_login/login.wxss */
+.wrap{
+  width: 100%;
+  height: 1090rpx;
+}
+.wrap .form{
+  padding: 104rpx 24rpx 0 24rpx;
+}
+.wrap .form input{
+  height: 50rpx;
+  padding: 24rpx;
+  font-size: 30rpx;
+}
+.wrap .form .phone{
+  width: 652rpx;
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
+  margin-bottom: 20rpx;
+}
+.wrap .form .code_part{
+  margin-bottom: 84rpx;
+}
+.wrap .form .code{
+  width: 342rpx;
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
+}
+.wrap .form .get_code{
+  background-color: #c6c6c6;
+  font-size: 30rpx;
+  color: #fff;
+  width: 290rpx;
+  height: 98rpx;
+  text-align: center;
+  line-height: 98rpx;
+  border-radius: 20rpx;
+  margin-left: 20rpx;
+}
+.wrap .btn{
+  color: #fff;
+  font-size: 36rpx;
+  width: 100%;
+  height: 84rpx;
+  margin-bottom: 36rpx;
+}
+.bottom{
+  width: 100%;
+  height: 84rpx;
+  background-color: #d7f5d2;
+  color: #50ab43;
+  font-size: 24rpx;
+  padding: 24rpx; 
+}
+.bottom radio{
+  margin-left: 14rpx;
+}

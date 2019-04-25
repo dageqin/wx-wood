@@ -1,0 +1,16 @@
+<!--pages/my_login/login.wxml-->
+<view class='wrap bc_gray'>
+  <form bindsubmit="formSubmit">
+    <view class='form'>
+      <input class='phone' name='phone' placeholder='请输入手机号'></input>
+      <view class='flex-wrp code_part'>
+        <input class='code' name='code' placeholder='请输入验证码'></input>
+        <view class='get_code'>获取验证码</view>
+      </view>
+    </view>
+    <button class='btn bc_green' form-type="submit">登录</button>
+  </form>
+  <view class='bottom'>
+    <radio value="radio" /> 《全木材注册协议》
+  </view>
+</view>

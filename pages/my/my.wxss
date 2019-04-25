@@ -1,1 +1,147 @@
 /* pages/my/my.wxss */
+/* public */
+.title{
+  font-size: 36rpx;
+  padding: 30rpx 24rpx;
+  background-color: #fbfbfb;
+}
+.item{
+  height: 108rpx;
+  width: 100%;
+  border-top:1px solid #d6d6d6;
+  font-size: 30rpx;
+  display:flex;
+  line-height:108rpx;
+  background-color:#fff;
+}
+.item image{
+  width: 66rpx;
+  height: 66rpx;
+  margin: 24rpx 20rpx;
+}
+.wrap{
+  /* font-size: 36rpx; */
+  position: relative;
+}
+/* 背景图片 */
+/* .wrap .bc{
+  width: 100%;
+  height:380rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.wrap .bc image{
+  width: 100%;
+  height: 380rpx;
+} */
+.wrap .person{
+  width: 100%;
+  /* height: 310rpx; */
+  margin-bottom: 20rpx;
+  padding: 42rpx 24rpx;
+}
+/* .wrap .person.no_login{
+  height:346rpx !important;
+} */
+
+.wrap .person .person_top{
+  height: 128rpx;
+  font-size: 32rpx;
+  color: #fff;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.wrap .person .person_top .avatar{
+  height: 98rpx;
+  width: 98rpx;
+} 
+.wrap .person .person_top .name{
+  padding-bottom: 8rpx;
+}
+.wrap .person .person_top .top_text{
+  padding-left: 10rpx;
+  padding-right: 40rpx;
+  padding-bottom: 8rpx;
+}
+.wrap .person .person_top .notLogin{
+  font-size: 30rpx;
+  color: #3b9013;
+}
+.wrap .person .person_top_img{
+  width: 42rpx;
+  height: 34rpx;
+  margin-left:20rpx;
+}
+.wrap .person .person_top .pledge_img{
+  width: 30rpx;
+  height: 32rpx;
+}
+.wrap .person .person_top .btn_add1{
+  width: 126rpx;
+  height: 42rpx;
+  margin-left:-20rpx;
+}
+.wrap .person .person_top .btn_add2{
+  width: 100rpx;
+  height: 42rpx;
+  margin-left:194rpx;
+}
+.wrap .person .person_top .btn_right{
+  width: 32rpx;
+  height: 52rpx;
+  position: absolute;
+  right: 34rpx;
+  top: 34rpx;
+}
+.wrap .person .person_top .btn_right image{
+  width: 32rpx;
+  height: 52rpx;
+}
+.wrap .person .person_bottom{
+  width: 660rpx;
+  /* height: 108rpx; */
+  /* background-image: url('../../images/mine_top_bg.png'); */
+  padding: 46rpx 20rpx;
+  background-size:100% 100%;
+}
+.wrap .person .person_bottom .left{
+  width: 84rpx;
+  height: 84rpx;
+  margin-right: 20rpx;
+  margin-top:20rpx;
+}
+.wrap .person .person_bottom .mid{
+  color: #854404;
+  width:59%;
+}
+.wrap .person .person_bottom .mid .text_vip{
+  font-size: 40rpx;
+}
+.wrap .person .person_bottom .mid .text_add{
+  font-size: 32rpx;
+}
+.wrap .person .person_bottom .mid .text_add .text_detail{
+  border-bottom: 1px solid #854404;
+}
+.wrap .person .person_bottom .right{
+  width: 166rpx;
+  height: 70rpx;
+  margin-top:10%;
+  /* margin-left:52rpx; */
+}
+.wrap .buy{
+  margin-bottom: 28rpx;
+  height: 202rpx;
+}
+.wrap .sell{
+  margin-bottom: 28rpx;
+  height: 310rpx;
+}
+
+.wrap .server{
+  width: 100%;
+  height: 108rpx;
+  margin-bottom:20rpx;
+}

@@ -1,13 +1,28 @@
-// pages/my/my.js
+// pages/msg/msg.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    renew: false,
+    notLogin: true
   },
-
+  showMyBuy: function(){
+    wx.navigateTo({
+      url: '../my_mybuy/buy',
+    })
+  },
+  showMySell: function () {
+    wx.navigateTo({
+      url: '../my_mysell/sell',
+    })
+  },
+  showMyPrice: function () {
+    wx.navigateTo({
+      url: '../my_myprice/price',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

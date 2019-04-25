@@ -1,1 +1,49 @@
 /* pages/msg/msg.wxss */
+.wrap .msg_item{
+  width: 100%;
+  height: 94rpx;
+  padding: 32rpx 24rpx;
+  border-bottom: 1px solid #d6d6d6;
+  /* background-color: red; */
+}
+.wrap .msg_item .left{
+  width: 94rpx;
+  height: 94rpx;
+  position: relative;
+}
+.wrap .msg_item .left .num{
+  position:absolute;
+  right:-8%;
+  top:-12%;
+  width:40rpx;
+  height:40rpx;
+  border-radius:50%;
+  background-color:#ff0000;
+  color:#fff;
+  font-size:25rpx;
+  text-align:center;
+  line-height: 40rpx;
+}
+.wrap .msg_item .left .item_img{
+  width: 100%;
+  height: 100%;
+}
+/* 中间部分 */
+.wrap .msg_item .middle{
+  width: 64%;
+  height: 94rpx;
+  padding-left:24rpx;
+}
+.wrap .msg_item .middle .item_title{
+  font-size: 32rpx;
+  font-weight: bolder;
+  margin-bottom: 12rpx;
+}
+.wrap .msg_item .middle .item_content{
+  font-size: 30rpx;
+}
+.wrap .msg_item .item_date{
+  /* width: 10%; */
+  height: 84rpx;
+  font-size: 24rpx;
+}

@@ -1,0 +1,83 @@
+/* pages/my_myprice/price.wxss */
+/* 详情部分 */
+.wrap .mid{
+  padding: 50rpx 25rpx;
+  position: relative;
+  background-color: #f6f6f6;
+}
+.wrap .mid .title{
+  font-size: 32repx;
+}
+.wrap .mid .content{
+  width: 100%;
+  font-size: 30rpx;
+}
+.wrap .mid .content .left{
+  width: 46%;
+}
+.wrap .mid .content .right{
+  width: 46%;
+}
+/* date */
+.wrap .top{
+  font-size: 27rpx;
+  background-color: #fbfbfb;
+  padding: 30rpx 24rpx;
+}
+.wrap .top .top_left{
+  color: #ccc;
+  /* padding-right:132rpx; */
+}
+.wrap .detail{
+  background-color: #fff;
+}
+.wrap .detail .detail_mid{
+  padding: 32rpx 24rpx;
+}
+.wrap .detail .detail_mid .mid_left{
+  width: 46%;
+}
+wrap .detail .detail_mid .mid_left view{
+  margin-bottom: 20rpx;
+}
+.wrap .detail .detail_mid .mid_right{
+  width: 54%;
+}
+.wrap .detail .detail_mid .mid_right view{
+  text-align: right;
+  margin-bottom: 20rpx;
+}
+.wrap .detail .detail_mid .mid_right view text{
+  padding-left: 24rpx;
+}
+/* total */
+.wrap .detail .detail_total{
+  padding: 32rpx 24rpx;
+  font-size: 30rpx;
+  position: relative;
+}
+.wrap .detail .detail_total .btn_yellow{
+  position:absolute;
+  right:24rpx;
+  top:10rpx;
+}
+/* 按钮组 */
+.wrap .btn_group{
+  background-color: #efeff4;
+}
+.wrap .btn_group .btn_row{
+  margin-right: 34rpx;
+  margin-top: 24rpx;
+  text-align:right;
+  height: 74rpx;
+  font-size: 30rpx;
+  /* justify-content:flex-end; */
+}
+.wrap .btn_group .btn_row .btn_yellow{
+  margin-left:10rpx;
+  display: inline-block;
+}
+.wrap .btn_group view .btn_gray{
+  width:120rpx;
+}
+

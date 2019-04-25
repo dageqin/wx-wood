@@ -1,0 +1,18 @@
+<!--pages/my_personal_verticate/verticate.wxml-->
+<view class='bc_gray'>
+  <form bindsubmit='formSubmit'>
+    <view class='info'>
+      <label>姓名</label>
+      <input placeholder='请输入真实的名字'></input>
+      <label>身份证号</label>
+      <input placeholder='请输入正确的身份证号'></input>
+    </view>
+    <!-- 上传身份证 -->
+    <view class='upload'>
+      <view class='title'>身份证照片(正面+背面+手持)</view>
+      <view class='zheng'></view>
+    </view>
+    <!-- 说明 -->
+    <view class='notice'></view>
+  </form>
+</view>

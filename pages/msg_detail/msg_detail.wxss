@@ -1,0 +1,125 @@
+/* pages/msg_detail/msg_detail.wxss */
+.wrap .date{
+  font-size: 30rpx;
+  color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%;
+  height: 162rpx;
+  position:relative;
+}
+.wrap .date .date_text{
+  background-color: #ccc;
+  /* margin: 50rpx auto; */
+  padding: 16rpx 24rpx;
+  width: 40%;
+  position:absolute;
+  top:50rpx;
+  left:26%;
+}
+.wrap .detail{
+  margin: 0 24rpx;
+  background-color: #fff;
+  padding: 0 24rpx;
+
+}
+.wrap .detail .title{
+  font-size: 32rpx;
+  font-weight: bold;
+  padding: 32rpx 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.wrap .detail .content{
+  font-size: 30rpx;
+  padding: 32rpx 0;
+}
+.wrap .detail .content .con_text .bule_text{
+  color: #009cff;
+}
+.wrap .detail .content .con_btn{
+  margin-top: 50rpx;
+  margin-bottom: 34rpx;
+  margin-left:18%;
+  width: 374rpx;
+  height: 114rpx;
+  line-height: 114rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 40rpx;
+}
+
+/* msg */
+.wrap .msg{
+  margin: 34rpx 24rpx;
+  position: relative;
+}
+.wrap .msg .ta{
+  margin-top:24rpx;
+}
+.wrap .msg .ta .pic{
+  margin-right: 24rpx;
+}
+.wrap .msg .my{
+  position: absolute;
+  right: 0;
+  margin-top:24rpx;
+}
+.wrap .msg .my .pic{
+  margin-left: 24rpx;
+}
+.wrap .msg .my .chat .name{
+  text-align: right;
+}
+.pic{
+  width: 84rpx;
+  height: 84rpx;
+}
+.pic image{
+  width:84rpx;
+  height:84rpx;
+}
+.chat{
+  /* width: 80%; */
+  font-size: 24rpx;
+}
+.chat .name{
+  color: #ccc;
+  margin-bottom: 10rpx;
+}
+.chat .message{
+  padding: 24rpx;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  border-radius:20rpx;
+}
+/* 底部输入框 */
+.wrap .input_box{
+  border-top: 1px solid #adadad;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 134rpx;
+  background-color: #fff;
+  padding: 24rpx;
+}
+.wrap .input_box .input{
+  border: 1px solid #adadad;
+  padding: 24rpx;
+  width: 552rpx;
+  height: 84rpx;
+  border-radius:20rpx;
+}
+.wrap .input_box .btn-area{
+  margin-left: 30rpx;
+  width: 64rpx;
+  height: 56rpx;
+  margin-top: 40rpx;
+  /* position: absolute; */
+}
+/* .wrap .input_box .btn-area button{
+  width: 100%;
+  height: 100%;
+} */
+.wrap .input_box .btn-area image{
+  width: 100%;
+  height: 100%;
+}

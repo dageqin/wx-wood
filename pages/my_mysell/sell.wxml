@@ -1,0 +1,40 @@
+<!--pages/my_mysell/sell.wxml-->
+<view class='wrap bc_gray'>
+  <view class='part_detail'>
+    <view wx:for='{{trees}}' wx:key='index' class='one'>
+      <view class="item_header">
+        <text class='green'>供应：</text>
+        <text>{{item.treename}}</text>
+        <!-- <image src='../../images/main_sell_label.png'></image> -->
+      </view>
+      <view class='flex-wrp item_content'>
+        <view class='img'>
+          <image src="{{item.src}}"></image>
+        </view>
+        <view>
+          <view class='item'>价格:
+            <text class="price">{{item.price}}</text>
+          </view>
+          <view class='item'>库存量:
+            <text class="num gray">{{item.num}}</text>
+          </view>
+          <view class='item'>存货地:
+            <text class="address gray">{{item.address}}</text>
+          </view>
+          <view class='item'>更新时间:
+            <text class="updatedate gray">{{item.updatedate}}</text>
+          </view>
+        </view>
+      </view>
+      <!-- 按钮区域 -->
+      <view class='part_btn'>
+        <text>下架</text>
+        <text>修改</text>
+        <text class='btn_long'>刷新</text>
+      </view>
+
+
+    </view>
+  </view>
+  <view class='load_all'>加载全部</view>
+</view>

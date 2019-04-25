@@ -4,10 +4,12 @@
   <!-- 选择供应类型 -->
   <view class='sell_type content_pad bc_whrite'>
     <view class='box_bot'>选择供应类型(<text class='red'>必填</text>)</view>
-    <view class='box_border box_bot'>选择分类
-      <navigator class='nav_right' url='../index_sell_detail_category/category'>
+    <view class='box_border box_bot' bindtap='showCategory'>
+      <text wx:if='{{!categoryInfo.length}}'>选择分类</text>
+      <text wx:if='{{categoryInfo.length}}'>{{categoryInfo}}</text>
+      <!-- <navigator class='nav_right' url='../index_sell_detail_category/category'> -->
         <image class='btn_right' src='../../images/btn_right.png'></image>
-      </navigator>
+      <!-- </navigator> -->
     </view>
     <view class='box_border'>品名
       <image class='btn_right' src='../../images/btn_right.png'></image>
@@ -46,8 +48,10 @@
       <text>立方</text>
       <image class='btn_right' src='../../images/btn_right.png'></image>
     </view>
-    <view class='box_border box_bot'>请选择交货地址
-      <image class='btn_right' src='../../images/btn_right.png'></image>
+    <view class='box_border box_bot'>
+      <text class='address' wx:if='{{!areaInfo.length}}'>请选择交货地址</text>
+      <text class='address' wx:if='{{areaInfo.length}}'>{{areaInfo}}</text>
+      <image bindtap='selectDistrict' class='btn_right' src='../../images/btn_right.png'></image>
     </view>
     <view class='box_border box_bot' style="display:flex;">
       <label>详细地址</label>
@@ -89,4 +93,28 @@
     <button formType="submit" class='bc_green'>发布供货</button>
   </view>
 </form>
+
+ <!-- 选择城市控件 -->
+  <view class="picker-view" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+    <view style="height:10% ;width:95%;margin-top:10rpx">
+      <text catchtap="cityCancel">取消</text>
+      <text style="float: right" catchtap="citySure">确定</text>
+    </view>
+    <!--"可以显示默认的城市，使用后级联选择城市反应很慢就不使用了-->
+    <picker-view style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+      <picker-view-column>
+        <view wx:for="{{provinces}}" class="picker-item">
+          {{item.name}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{citys}}" class="picker-item" wx:key="">
+          {{item.name}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{areas}}" class="picker-item" wx:key="">
+          {{item.name}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+
 </view>

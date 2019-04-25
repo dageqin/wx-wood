@@ -134,9 +134,31 @@ Page({
     ],
     categoryChildren: [],
     showChild: false,
-    selected: false
+    selected: false,
+    selectedSecond:[],
+    selectedFirst:'',
+    categoryInfo:''
+  },
+  formSubmit: function(e){
+    console.log(e.detail);
+    var that = this;
+    // var secondList = this.data.selectedSecond.
+    this.setData({
+      categoryInfo: that.data.selectedFirst + '>' + that.data.selectedSecond
+    })
+    console.log(this.data.categoryInfo);
+    wx.redirectTo({
+      url: '/pages/index_sell_detail/sell_detail?info=' + that.data.categoryInfo
+    })
   },
   show: function(e){
+    console.log(e);
+    var that = this;
+    var id = e.currentTarget.dataset.id;
+    var value = e.currentTarget.dataset.value;
+    this.setData({
+      selectedFirst: value
+    })
     this.data.categoryChildren = [
       {
         "id": "10101",
@@ -403,6 +425,20 @@ Page({
     this.setData({
       showChild: (!that.data.showChild),
       categoryChildren: (that.data.categoryChildren)
+    })
+  },
+  checkboxChange: function(e){
+    var that = this;
+    var checkdedList = e.detail.value;
+    var text = [];
+    var id = [];
+    for (var i = 0; i < checkdedList.length; i++) {
+      var item = checkdedList[i].split(',');
+      text = text.concat(item[0]);
+      id = id.concat(item[1]);
+    }
+    this.setData({
+      selectedSecond: text
     })
   },
   // selectedChild: function(e){

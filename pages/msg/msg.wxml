@@ -1,2 +1,40 @@
 <!--pages/msg/msg.wxml-->
-<text>pages/msg/msg.wxml</text>
+<view class='bc_gray wrap'>
+  <navigator url='../msg_detail/msg_detail'>
+    <view class='msg_item flex-wrp bc_whrite'>
+    <view class='left'>
+      <image class='item_img' src='../../images/message_avatar.png'></image>
+    </view>
+    <view class='middle'>
+      <view class='item_title'>全木材A</view>
+      <view class='item_content'>你好，你们的发货地是哪里？</view>
+    </view>
+    <view class='item_date gray'>18/06/21</view>
+  </view>
+  </navigator>
+  <navigator url='../msg_detail/msg_detail'>
+    <view class='msg_item flex-wrp bc_whrite'>
+    <view class='left'>
+      <image class='item_img' src='../../images/message_avatar.png'></image>
+      <view class='num'>31</view>
+    </view>
+    <view class='middle'>
+      <view class='item_title'>全木材A</view>
+      <view class='item_content'>你好，你们的发货地是哪里？</view>
+    </view>
+    <view class='item_date gray'>18/06/21</view>
+    </view>
+  </navigator>
+  <navigator url='../msg_detail/msg_detail'>
+    <view class='msg_item flex-wrp bc_whrite'>
+      <view class='left'>
+        <image class='item_img' src='../../images/message_avatar.png'></image>
+      </view>
+      <view class='middle'>
+        <view class='item_title'>全木材A</view>
+        <view class='item_content'>你好，你们的发货地是哪里？</view>
+      </view>
+      <view class='item_date gray'>18/06/21</view>
+    </view>
+  </navigator>
+</view>

@@ -1,2 +1,102 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class='wrap bc_gray'>
+  <!-- 背景色 -->
+  <!-- <view class='bc'>
+    <image src='../../images/mine_top_bg.png'></image>
+  </view> -->
+  <!-- 已经登录 -->
+  <view class='person' wx:if='{{!notLogin}}' style='background-image:url(../../images/mine_top_bg.png);'>
+    <view class='bc_top'>
+      <view class='person_top flex-wrp'>
+        <image class='avatar' src='../../images/message_avatar.png'></image>
+        <view>
+          <view class='name'>幸福小小明</view>
+          <view>
+            <view>
+              <image class='person_top_img' src='../../images/mine_real_name_off.png'></image>
+              <text class='top_text'>未认证</text>
+              <image class='pledge_img' src='../../images/mine_pledge.png'></image>
+              <text class='top_text'>0元</text>
+              <image class='btn_add1' src='../../images/mine_add_pledge_cash_1.png'></image>
+            </view>
+          </view>
+          <view wx:if='{{renew}}'>
+            <image class='person_top_img' src='../../images/mine_real_name_on.png'></image>
+            <image class='person_top_img' src='../../images/mine_real_comp.png'></image>
+            <image class='btn_add2' src='../../images/mine_add_pledge_cash_2.png'></image>
+          </view>
+          <navigator class='btn_right'>
+            <image src='../../images/btn_right_white.png'></image>
+          </navigator>
+        </view>
+        <!-- <image src='../../images/btn_right_white.png'></image> -->
+      </view>
+      <view class='person_bottom flex-wrp' style='background-image:url(../../images/mine_vip_bg_1.png);'>
+        <view wx:if='{{!renew}}' class='flex-wrp'>
+          <image class='left' src='../../images/mine_vip_0.png'></image>
+          <view class='mid'>
+            <view class='text_vip'>VIP特权中心</view>
+            <view class='text_add'>有效提升成单数，快速增加销售额</view>
+          </view>
+        </view>
+        <view wx:if='{{renew}}' class='flex-wrp'>
+          <image class='left' src='../../images/mine_vip_renew.png'></image>
+          <view class='mid'>
+            <view class='text_vip'>VIP会员续费</view>
+            <view class='text_add'>有效提升成单数，快速增加销售额</view>
+            <view class='text_detail'>VIP个人信息 查看详情></view>
+          </view>
+          <image class='right' src='../../images/mine_vip_renew_button.png'></image>
+        </view>
+        <image class='right' src='../../images/btn_mine_vip_open.png'></image>
+      </view>
+    </view>
+  </view>
+  <!-- 未登录 -->
+  <view class='person no_login' wx:if='{{notLogin}}' style='background-image:url(../../images/mine_top_bg.png);'>
+    <view class='person_top flex-wrp'>
+      <image class='avatar' src='../../images/message_avatar.png'></image>
+      <view>
+        <view class='name'>立即登录</view>
+        <view class='notLogin'>
+          全木材，有才更有财
+        </view>
+        <navigator url='../my_login/login'>
+          <image class='btn_right' src='../../images/btn_right_white.png'></image>
+        </navigator>
+      </view>
+    </view>
+    <view class='person_bottom flex-wrp' style='background-image:url(../../images/mine_vip_bg_2.png);'>
+      <view class='flex-wrp'>
+        <image class='left' src='../../images/mine_vip_1.png'></image>
+        <view class='mid' style='color:#3c90b2;'>
+          <view class='text_vip'>LV.1</view>
+          <view class='text_add'>短信推送+刷新服务+供应服务+商机宝+自动报价服务+报价服务</view>
+        </view>
+        <image class='right' src='../../images/btn_mine_vip_detail.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='buy'>
+    <view class='title'>买家</view>
+    <view class='my_buy item' bindtap='showMyBuy'>
+      <image src='../../images/btn_buy.png'></image>
+      <text>我的求购</text>
+    </view>
+  </view>
+  <view class='sell'>
+    <view class='title'>卖家</view>
+    <view class='item' bindtap='showMySell'>
+      <image src='../../images/btn_sell.png'></image>
+      <text>我的供应</text>
+    </view>
+    <view class='item' bindtap='showMyPrice'>
+      <image src='../../images/btn_mine_quote_list.png'></image>
+      <text>我的报价</text>
+    </view>
+  </view>
+  <view class='server item'>
+    <image src='../../images/mine_customer_service.png'></image>
+    <text>联系客服</text>
+  </view>
+</view>

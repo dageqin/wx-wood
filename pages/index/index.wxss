@@ -36,6 +36,7 @@
 }
 .sell_detail_item .item_header{
     position: relative;
+    padding-left: 24rpx;
 }
 .sell_detail_item .item_header image{
    position: absolute;
@@ -175,6 +176,7 @@
 /* 查看详情按钮 */
 .buy_detail_item .item_footer .btn{
   width: 50%;
+  text-align:center;
 }
 .buy_detail_item .item_footer .btn .footer_right{
     margin-left:60rpx;

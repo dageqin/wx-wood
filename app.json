@@ -5,8 +5,13 @@
     "pages/index_sell_detail/sell_detail",
     "pages/index_sell_detail_category/category",
     "pages/msg/msg",
-    "pages/my/my"
-
+    "pages/msg_detail/msg_detail",
+    "pages/my/my",
+    "pages/my_login/login",
+    "pages/my_mybuy/buy",
+    "pages/my_mysell/sell",
+    "pages/my_myprice/price",
+    "pages/my_personal_verticate/verticate"
   ],
   "tabBar": {
     "color":"",

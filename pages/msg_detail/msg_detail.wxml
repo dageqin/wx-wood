@@ -1,0 +1,49 @@
+<!--pages/msg_detail/msg_detail.wxml-->
+<view class='bc_gray wrap'>
+  <view class='date'>
+    <view class='date_text'>2019年4月20日 12:22</view>
+  </view>
+  <view class='detail'>
+    <view class='title'>老板，生意来啦！！！</view>
+    <view class='content'>
+      <view class='con_text'>
+        张先森看到你发布的“
+        <text class='bule_text'>原木樟子松</text>
+        ”供应消息，特邀请你去参入TA的求购单报价！
+      </view>
+      <view class='con_btn bc_green'>立即报价</view>
+    </view>
+  </view>
+  <view class='msg'>
+    <view class='ta flex-wrp'>
+      <view class='pic'>
+        <image src='../../images/message_avatar.png'></image>
+      </view>
+      <view class='chat'>
+        <view class='name'>全木材A</view>
+        <view class='message'>您好，柠檬的发货地在哪里？您好，柠檬的发货地在哪里？您好，柠檬的发货地在哪里？</view>
+      </view>
+    </view>
+    <view class='my flex-wrp'>
+      <view class='chat'>
+        <view class='name'>全木材A</view>
+        <view class='message'>您好，柠檬的发货地在哪里？</view>
+      </view>
+      <view class='pic'>
+        <image src='../../images/message_avatar.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='input_box'>
+    <form bindsubmit="formSubmit">
+    <view class='flex-wrp'>
+       <input class='input' name="input" placeholder="请输入" />
+        <view class="btn-area">
+          <!-- <button form-type="submit"> -->
+            <image form-type="submit" src='../../images/message_send.png'></image>
+          <!-- </button> -->
+        </view>
+      </view>
+    </form>
+  </view>
+</view>

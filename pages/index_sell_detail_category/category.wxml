@@ -1,28 +1,30 @@
 <!--pages/index_sell_detail_category/category.wxml-->
 <form bindsubmit="formSubmit" bindreset="formReset" class='bc_gray'>
-<view wx:for='{{category}}' wx:key="" wx:if='{{!showChild}}'>
-  <view class='item'>
-    <view class='hide'>{{item.id}}</view>
-    <view>{{item.name}}</view>
-    <image bindtap='show' class='btn_right' src='../../images/btn_right.png'></image>
-  </view>
-</view>
-<!-- 子级 -->
-<view class='children' wx:if='{{showChild}}'>
-<view wx:for='{{categoryChildren}}'>
-  <view class='item'>
-    <view class='hide'>{{item.id}}</view>
-    <view>{{item.name}}</view>
-    <view class='item_checkbox' data-id="{{index}}">
-      <checkbox class='isSelect' value="{{item.name}}" checked="{{item.checked}}"/>
-      <!-- <image wx:if='{{item.isSelected}}' src='../../images/btn_checkbox_on.png'></image>
-    <image wx:if='{{!item.isSelected}}'  bindtap='selectedChild' class='item_checkbox' src='../../images/btn_checkbox_off.png'></image> -->
+  <view wx:for='{{category}}' wx:key="" wx:if='{{!showChild}}'>
+    <view class='item'>
+      <view class='hide'>{{item.id}}</view>
+      <view>{{item.name}}</view>
+      <!-- <view > -->
+      <image data-id='{{item.id}}' data-value='{{item.name}}' bindtap='show' class='btn_right' src='../../images/btn_right.png'></image>
+      <!-- </view> -->
     </view>
   </view>
-</view>
-<!-- 按钮 -->
-<view class="btn-area">
-  <button formType="submit" class='bc_green'>确认选择</button>
-</view>
-</view>
+  <!-- 子级 -->
+  <view class='children' wx:if='{{showChild}}'>
+    <checkbox-group bindchange="checkboxChange">
+      <view wx:for='{{categoryChildren}}'>
+        <view class='item'>
+          <view class='hide'>{{item.id}}</view>
+          <view>{{item.name}}</view>
+          <view class='item_checkbox'>
+            <checkbox class='isSelect' data-id="{{index}}" value="{{item.name}},{{item.id}}" checked="{{item.checked}}" />
+          </view>
+        </view>
+      </view>
+    </checkbox-group>
+    <!-- 按钮 -->
+    <view class="btn-area">
+      <button formType="submit" class='bc_green'>确认选择</button>
+    </view>
+  </view>
 </form>

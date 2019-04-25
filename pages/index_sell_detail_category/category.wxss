@@ -6,3 +6,8 @@
 .btn_right{
   margin-top:-38rpx;
 }
+.btn-area{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
